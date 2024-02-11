@@ -1,0 +1,103 @@
+.banner {
+    background-color: orange;
+    color: black;
+    padding: 10px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .icon-container{
+    position: absolute;
+    left: -7px;
+    top: -2px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .icon{
+    width: 100%;
+    height: auto;
+  }
+  
+  .text {
+    font-size: 18px;
+    margin-left: 3px; /* Adjust as needed to create space between clock and text */
+  }
+
+  #offerText {
+    margin-left: 75px; /* Adjust as needed to create space between clock and first text */
+  }
+
+  /*New class for clock icon on smaller screens*/
+  .clock-icon-small{
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .banner {
+      flex-direction: column;
+      text-align: center;
+      background-color: #fbcefb;
+      border: 3px solid #ec9706;
+    }
+
+    .banner .text{
+        margin-left: 0;
+    }
+
+    .icon-container{
+        display: none;
+    }
+
+    #offerText::after{
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: grey;
+        margin-left: 3px;
+        margin-top: 5px;
+    }
+
+    #offerText{
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    #promoText{
+        background-color: #ec9706;
+        padding: 10px;
+        /* border-radius: 25px; */
+        display: inline-block;
+        width: 100%;
+    }
+
+    /*Show clock icon for smaller screens*/
+    .clock-icon-small{
+        display: inline-block;
+        width: 44px;
+        height: auto;
+        margin-right: 10px; /*adjust as needed*/
+    }
+
+    #limitedTimeOfferBanner {
+        position: relative;
+    }
+
+    #smallClockIcon {
+        position: absolute;
+        left: 125px; /* Adjust as needed */
+        top: 25%;
+        border-radius: 25px;
+        transform: translateY(-50%);
+    }
+  }
+
+  
+  
